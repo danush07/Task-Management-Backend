@@ -1,5 +1,5 @@
 const express = require('express')
-const connectDB = require('./backend/MongoDb/db');
+const connectDB = require('./MongoDb/db');
 const { errorHandler } = require('./middleware/errorMiddleware');
 require('dotenv').config()
 
