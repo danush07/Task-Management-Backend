@@ -1,5 +1,5 @@
 const express = require('express')
-const connectDB = require('./MongoDb/db');
+const connectDB = require('../backend/MongoDb/db');
 const { errorHandler } = require('./middleware/errorMiddleware');
 require('dotenv').config()
 
@@ -15,8 +15,14 @@ app.use(cors());
 
 
 //routes
-app.use('/api/users', require('./routes/userRoutes'))
-app.use('/api/projects',require('./routes/projectRoutes'))
+app.use(
+  "https://task-management-backend-hpay.onrender.com/api/users",
+  require("./routes/userRoutes")
+);
+app.use(
+  "https://task-management-backend-hpay.onrender.com/api/projects",
+  require("./routes/projectRoutes")
+);
 
 
 
