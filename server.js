@@ -16,11 +16,11 @@ app.use(cors());
 
 //routes
 app.use(
-  "https://task-management-backend-hpay.onrender.com/api/users",
+  "/api/users",
   require("./routes/userRoutes")
 );
 app.use(
-  "https://task-management-backend-hpay.onrender.com/api/projects",
+  "/api/projects",
   require("./routes/projectRoutes")
 );
 
