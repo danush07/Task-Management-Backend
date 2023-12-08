@@ -5,11 +5,11 @@ const {registerUser,loginUser,profilePage,getAllUsers,changePassword} = require(
 
 const {protect} = require('../middleware/authMiddleware')
 
-router.post('https://task-management-backend-hpay.onrender.com/',registerUser)
-router.post('https://task-management-backend-hpay.onrender.com/login',loginUser)
-router.get('https://task-management-backend-hpay.onrender.com/me',protect,profilePage)
-router.put('https://task-management-backend-hpay.onrender.com/changepassword',protect,changePassword)
-router.get('https://task-management-backend-hpay.onrender.com/getall',protect,getAllUsers)
+router.post('/',registerUser)
+router.post('/login',loginUser)
+router.get('/me',protect,profilePage)
+router.put('/changepassword',protect,changePassword)
+router.get('/getall',protect,getAllUsers)
 
 
 module.exports = router
